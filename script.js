@@ -14,16 +14,26 @@ Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda 
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna. */
 
 let i;
-for (i = 1; i <= 100; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
-        document.querySelector(".row").innerHTML += `<div class="square col-1 fizzbuzz">FizzBuzz</div>`
-    } else if (i % 3 == 0) {
-        document.querySelector(".row").innerHTML += `<div class="square col-1 fizz">Fizz</div>`
-    } else if (i % 5 == 0) {
-        document.querySelector(".row").innerHTML += `<div class="square col-1 buzz">Buzz</div>`
-    } else {
-        document.querySelector(".row").innerHTML += `<div class="square col-1">${i}</div>`
-    }
+let maxNumber;
+let fizz;
+let buzz;
+let fizzbuzz;
 
-    
-}
+document.getElementById("run").addEventListener("click", function() {
+    maxNumber = document.getElementById("max-number").value;
+    fizz = document.getElementById("fizz").value;
+    buzz = document.getElementById("buzz").value;
+
+    for (i = 1; i <= maxNumber; i++) {
+        if (i % fizz == 0 && i % buzz == 0) {
+            document.querySelector(".row").innerHTML += `<div class="square col-1 fizzbuzz">FizzBuzz</div>`
+        } else if (i % fizz == 0) {
+            document.querySelector(".row").innerHTML += `<div class="square col-1 fizz">Fizz</div>`
+        } else if (i % buzz == 0) {
+            document.querySelector(".row").innerHTML += `<div class="square col-1 buzz">Buzz</div>`
+        } else {
+            document.querySelector(".row").innerHTML += `<div class="square col-1">${i}</div>`
+        }  
+    }
+})
+
