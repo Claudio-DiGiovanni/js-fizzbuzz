@@ -16,11 +16,11 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 let i;
 for (i = 1; i <= 100; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
-        document.querySelector(".row").innerHTML += `<div class="square col-1">FizzBuzz</div>`
+        document.querySelector(".row").innerHTML += `<div class="square col-1 fizzbuzz">FizzBuzz</div>`
     } else if (i % 3 == 0) {
-        document.querySelector(".row").innerHTML += `<div class="square col-1">Fizz</div>`
+        document.querySelector(".row").innerHTML += `<div class="square col-1 fizz">Fizz</div>`
     } else if (i % 5 == 0) {
-        document.querySelector(".row").innerHTML += `<div class="square col-1">Buzz</div>`
+        document.querySelector(".row").innerHTML += `<div class="square col-1 buzz">Buzz</div>`
     } else {
         document.querySelector(".row").innerHTML += `<div class="square col-1">${i}</div>`
     }
